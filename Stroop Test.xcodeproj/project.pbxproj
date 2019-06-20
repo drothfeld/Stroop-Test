@@ -17,6 +17,7 @@
 		B0D2638822BC003800E8ACA6 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638722BC003800E8ACA6 /* SetupViewController.swift */; };
 		B0D2638A22BC005000E8ACA6 /* TestSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638922BC005000E8ACA6 /* TestSessionViewController.swift */; };
 		B0D2638C22BC016500E8ACA6 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638B22BC016500E8ACA6 /* ResultsViewController.swift */; };
+		B0D2639122BC062000E8ACA6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0D2639022BC061F00E8ACA6 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B0D2638722BC003800E8ACA6 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		B0D2638922BC005000E8ACA6 /* TestSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSessionViewController.swift; sourceTree = "<group>"; };
 		B0D2638B22BC016500E8ACA6 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		B0D2639022BC061F00E8ACA6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,8 @@
 				B0D2637E22BAADB700E8ACA6 /* Models */,
 				B0D2638622BBFF8500E8ACA6 /* Storyboards */,
 				B0D2638522BBFF7800E8ACA6 /* View Controllers */,
+				B0D2638E22BC05F800E8ACA6 /* Assets */,
 				B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */,
-				B0D2637322BAA9DF00E8ACA6 /* Assets.xcassets */,
 				B0D2637822BAA9DF00E8ACA6 /* Info.plist */,
 			);
 			path = "Stroop Test";
@@ -109,6 +111,23 @@
 				B0D2638B22BC016500E8ACA6 /* ResultsViewController.swift */,
 			);
 			path = "Test Session";
+			sourceTree = "<group>";
+		};
+		B0D2638E22BC05F800E8ACA6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2638F22BC061900E8ACA6 /* Images */,
+				B0D2637322BAA9DF00E8ACA6 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B0D2638F22BC061900E8ACA6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2639022BC061F00E8ACA6 /* background.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D2637722BAA9DF00E8ACA6 /* LaunchScreen.storyboard in Resources */,
+				B0D2639122BC062000E8ACA6 /* background.png in Resources */,
 				B0D2637422BAA9DF00E8ACA6 /* Assets.xcassets in Resources */,
 				B0D2637222BAA9DE00E8ACA6 /* Main.storyboard in Resources */,
 			);
