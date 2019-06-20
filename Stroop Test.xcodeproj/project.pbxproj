@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		B0D2636D22BAA9DE00E8ACA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */; };
-		B0D2636F22BAA9DE00E8ACA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2636E22BAA9DE00E8ACA6 /* ViewController.swift */; };
+		B0D2636F22BAA9DE00E8ACA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2636E22BAA9DE00E8ACA6 /* MenuViewController.swift */; };
 		B0D2637222BAA9DE00E8ACA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D2637022BAA9DE00E8ACA6 /* Main.storyboard */; };
 		B0D2637422BAA9DF00E8ACA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0D2637322BAA9DF00E8ACA6 /* Assets.xcassets */; };
 		B0D2637722BAA9DF00E8ACA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D2637522BAA9DF00E8ACA6 /* LaunchScreen.storyboard */; };
 		B0D2638022BAADD600E8ACA6 /* Stroop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2637F22BAADD600E8ACA6 /* Stroop.swift */; };
 		B0D2638422BB65D900E8ACA6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638322BB65D900E8ACA6 /* Color.swift */; };
+		B0D2638822BC003800E8ACA6 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638722BC003800E8ACA6 /* SetupViewController.swift */; };
+		B0D2638A22BC005000E8ACA6 /* TestSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638922BC005000E8ACA6 /* TestSessionViewController.swift */; };
+		B0D2638C22BC016500E8ACA6 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2638B22BC016500E8ACA6 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B0D2636922BAA9DE00E8ACA6 /* Stroop Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stroop Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0D2636E22BAA9DE00E8ACA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0D2636E22BAA9DE00E8ACA6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B0D2637122BAA9DE00E8ACA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0D2637322BAA9DF00E8ACA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0D2637622BAA9DF00E8ACA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0D2637822BAA9DF00E8ACA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D2637F22BAADD600E8ACA6 /* Stroop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroop.swift; sourceTree = "<group>"; };
 		B0D2638322BB65D900E8ACA6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B0D2638722BC003800E8ACA6 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		B0D2638922BC005000E8ACA6 /* TestSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSessionViewController.swift; sourceTree = "<group>"; };
+		B0D2638B22BC016500E8ACA6 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				B0D2637E22BAADB700E8ACA6 /* Models */,
+				B0D2638622BBFF8500E8ACA6 /* Storyboards */,
+				B0D2638522BBFF7800E8ACA6 /* View Controllers */,
 				B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */,
-				B0D2636E22BAA9DE00E8ACA6 /* ViewController.swift */,
-				B0D2637022BAA9DE00E8ACA6 /* Main.storyboard */,
 				B0D2637322BAA9DF00E8ACA6 /* Assets.xcassets */,
-				B0D2637522BAA9DF00E8ACA6 /* LaunchScreen.storyboard */,
 				B0D2637822BAA9DF00E8ACA6 /* Info.plist */,
 			);
 			path = "Stroop Test";
@@ -76,6 +81,34 @@
 				B0D2638322BB65D900E8ACA6 /* Color.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B0D2638522BBFF7800E8ACA6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2636E22BAA9DE00E8ACA6 /* MenuViewController.swift */,
+				B0D2638D22BC01B400E8ACA6 /* Test Session */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B0D2638622BBFF8500E8ACA6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2637522BAA9DF00E8ACA6 /* LaunchScreen.storyboard */,
+				B0D2637022BAA9DE00E8ACA6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B0D2638D22BC01B400E8ACA6 /* Test Session */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2638722BC003800E8ACA6 /* SetupViewController.swift */,
+				B0D2638922BC005000E8ACA6 /* TestSessionViewController.swift */,
+				B0D2638B22BC016500E8ACA6 /* ResultsViewController.swift */,
+			);
+			path = "Test Session";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D2638022BAADD600E8ACA6 /* Stroop.swift in Sources */,
-				B0D2636F22BAA9DE00E8ACA6 /* ViewController.swift in Sources */,
+				B0D2636F22BAA9DE00E8ACA6 /* MenuViewController.swift in Sources */,
 				B0D2638422BB65D900E8ACA6 /* Color.swift in Sources */,
+				B0D2638C22BC016500E8ACA6 /* ResultsViewController.swift in Sources */,
+				B0D2638A22BC005000E8ACA6 /* TestSessionViewController.swift in Sources */,
 				B0D2636D22BAA9DE00E8ACA6 /* AppDelegate.swift in Sources */,
+				B0D2638822BC003800E8ACA6 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "drothfeld.Stroop-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "drothfeld.Stroop-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
