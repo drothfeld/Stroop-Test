@@ -17,10 +17,10 @@ struct Stroop: Equatable {
     var textColor: Color
     var fontColor: Color
     
-    init (textColor: Color?, fontColor: Color?, isMismatched: Bool) {
-        self.textColor = textColor ?? Color.generator.random()
+    init (colorRange: Int, isMismatched: Bool) {
+        self.textColor = Color.shared.random(maxRange: colorRange)
         repeat {
-            self.fontColor = (fontColor ?? Color.generator.random())
+            self.fontColor = Color.shared.random(maxRange: colorRange)
         } while (isMismatched && self.fontColor == self.textColor)
     }
     

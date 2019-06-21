@@ -73,13 +73,15 @@
                                     <constraint firstItem="JPx-oU-SBy" firstAttribute="centerX" secondItem="NTJ-HC-6Zc" secondAttribute="centerX" id="oxS-T1-xil"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stroop Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDr-yj-d4i">
-                                <rect key="frame" x="0.0" y="60" width="375" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDr-yj-d4i">
+                                <rect key="frame" x="0.0" y="60" width="375" height="152"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2TV-Fy-EBa"/>
+                                    <constraint firstAttribute="height" constant="152" id="2TV-Fy-EBa"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="Wg1-IF-Oac"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                <string key="text">Stroop 
+Test</string>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="55"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>

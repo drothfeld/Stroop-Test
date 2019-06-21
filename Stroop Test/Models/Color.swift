@@ -17,7 +17,7 @@ struct Color: Equatable {
     var id: Int?
     var asString: String?
     var asUIColor: UIColor?
-    static let generator = Color()
+    static let shared = Color()
     
     private init(id: Int, asString: String, asUIColor: UIColor) {
         self.id = id
@@ -39,6 +39,6 @@ struct Color: Equatable {
     static let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta)
     let colors = [black, red, yellow, orange, green, purple, blue, brown, cyan, magenta]
     
-    func random() -> Color { return colors[Int(arc4random_uniform(UInt32(colors.count)) + 1)] }
+    func random(maxRange: Int) -> Color { return colors[Int(arc4random_uniform(UInt32(maxRange)) + 1)] }
     static func == (lhs: Color, rhs: Color) -> Bool { return ( (lhs.id == rhs.id) && (lhs.asString == rhs.asString) && (lhs.asUIColor == lhs.asUIColor) ) }
 }

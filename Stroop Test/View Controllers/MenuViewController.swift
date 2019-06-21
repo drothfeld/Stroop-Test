@@ -21,6 +21,7 @@ class MenuViewController: UIViewController {
     // Controller Values
     let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setting version number in UI
@@ -43,16 +44,7 @@ class MenuViewController: UIViewController {
 extension UILabel {
     // Start UILabel blinking animation
     func startBlink() {
-        UIView.animate(withDuration: 1.0,
-                       delay:0.0,
-                       options:[.allowUserInteraction, .curveEaseInOut, .autoreverse, .repeat],
-                       animations: { self.alpha = 0.10 },
-                       completion: nil)
-    }
-    // Stop UILabel blinking animation
-    func stopBlink() {
-        layer.removeAllAnimations()
-        alpha = 1
+        UIView.animate(withDuration: 1.0, delay:0.0, options:[.allowUserInteraction, .curveEaseInOut, .autoreverse, .repeat], animations: {self.alpha = 0.10}, completion: nil)
     }
 }
 
