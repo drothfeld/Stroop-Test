@@ -124,16 +124,88 @@ Test</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2xO-jU-XPi" userLabel="Background Image" propertyAccessControl="all">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3q-hR-PXA" userLabel="Opacity Background Layer" propertyAccessControl="all">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36436919760000003" green="0.36436919760000003" blue="0.36436919760000003" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaB-kr-0YB" userLabel="Test Parameters View">
+                                <rect key="frame" x="0.0" y="187" width="375" height="325"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZc-ZA-dvu" userLabel="Number of Words View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Words:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3t-uk-qEO" userLabel="Number of Words Label">
+                                                <rect key="frame" x="42" y="8" width="180" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" placeholder="1 - 40" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MPw-GL-MbK" userLabel="Number of Words Input">
+                                                <rect key="frame" x="250" y="15" width="80" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="numbWordsFieldChanges:" destination="0re-pZ-YER" eventType="editingDidBegin" id="5PD-MR-grw"/>
+                                                    <action selector="numbWordsFieldChanges:" destination="0re-pZ-YER" eventType="editingChanged" id="ZFX-1Y-pSe"/>
+                                                    <action selector="numbWordsFieldChanges:" destination="0re-pZ-YER" eventType="valueChanged" id="Zrj-9F-j3V"/>
+                                                    <action selector="numbWordsFieldChanges:" destination="0re-pZ-YER" eventType="editingDidEnd" id="jQB-ud-5fU"/>
+                                                    <outlet property="delegate" destination="0re-pZ-YER" id="9fd-PV-AcF"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwZ-ZU-Of8" userLabel="Time Limit View">
+                                        <rect key="frame" x="0.0" y="68" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Limit Per Word:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJZ-E6-pa8" userLabel="Time Limit Label">
+                                                <rect key="frame" x="42" y="8" width="200" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" placeholder="5 - 30" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QRk-ae-yh7" userLabel="Time Limit Input">
+                                                <rect key="frame" x="250" y="15" width="80" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="wordTimeLimitFieldChanges:" destination="0re-pZ-YER" eventType="valueChanged" id="7an-mr-Ltf"/>
+                                                    <action selector="wordTimeLimitFieldChanges:" destination="0re-pZ-YER" eventType="editingChanged" id="Htb-tr-jjf"/>
+                                                    <action selector="wordTimeLimitFieldChanges:" destination="0re-pZ-YER" eventType="editingDidEnd" id="ZRa-bE-kQG"/>
+                                                    <action selector="wordTimeLimitFieldChanges:" destination="0re-pZ-YER" eventType="editingDidBegin" id="eZV-NB-SrR"/>
+                                                    <outlet property="delegate" destination="0re-pZ-YER" id="uff-Uv-qDA"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2xO-jU-XPi" firstAttribute="top" secondItem="uiD-72-0XV" secondAttribute="top" id="3JB-Ee-5p3"/>
+                            <constraint firstItem="R3q-hR-PXA" firstAttribute="top" secondItem="uiD-72-0XV" secondAttribute="top" id="861-f1-NOK"/>
                             <constraint firstItem="2xO-jU-XPi" firstAttribute="leading" secondItem="LnQ-Yz-FdV" secondAttribute="leading" id="Svx-0b-yBP"/>
+                            <constraint firstItem="R3q-hR-PXA" firstAttribute="bottom" secondItem="uiD-72-0XV" secondAttribute="bottom" id="gQH-eK-mRp"/>
                             <constraint firstItem="2xO-jU-XPi" firstAttribute="bottom" secondItem="uiD-72-0XV" secondAttribute="bottom" id="kLp-cu-sgK"/>
                             <constraint firstItem="2xO-jU-XPi" firstAttribute="trailing" secondItem="LnQ-Yz-FdV" secondAttribute="trailing" id="nK9-vR-8I4"/>
+                            <constraint firstItem="R3q-hR-PXA" firstAttribute="trailing" secondItem="LnQ-Yz-FdV" secondAttribute="trailing" id="vW7-5Y-0qV"/>
+                            <constraint firstItem="R3q-hR-PXA" firstAttribute="leading" secondItem="LnQ-Yz-FdV" secondAttribute="leading" id="zqV-Mv-rc0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LnQ-Yz-FdV"/>
                     </view>
+                    <connections>
+                        <outlet property="NumbWordsTextField" destination="MPw-GL-MbK" id="Std-lN-iMj"/>
+                        <outlet property="TimeLimitTextField" destination="QRk-ae-yh7" id="6iU-wt-HbX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMu-gq-f8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
