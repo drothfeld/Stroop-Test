@@ -17,10 +17,17 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     // Storyboard Outlets
     @IBOutlet weak var NumbWordsTextField: UITextField!
     @IBOutlet weak var TimeLimitTextField: UITextField!
+    @IBOutlet weak var AllowRepeatsSwitch: UISwitch!
+    @IBOutlet weak var MatchingColorsSwitch: UISwitch!
+    @IBOutlet weak var ColorRangeSlider: UISlider!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Initialize test session instance and pass to TestSessionViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTest" {
+            let viewController = segue.destination as! TestSessionViewController
+            viewController.testSession = TestSession(numberOfStroops: Int(NumbWordsTextField.text!) ?? 20, responseTimeLimit: Int(TimeLimitTextField.text!) ?? 10, colorRange: Int(ColorRangeSlider.value), allowRepeats: AllowRepeatsSwitch.isOn, allowSameTextFontColor: MatchingColorsSwitch.isOn)
+        }
     }
     
     // Validate number range text field

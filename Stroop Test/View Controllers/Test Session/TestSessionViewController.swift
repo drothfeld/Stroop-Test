@@ -14,9 +14,10 @@ import UIKit
 // being used in a test session and records responses.
 // ==================================================
 class TestSessionViewController: UIViewController {
+    // Controller Values
+    var testSession: TestSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    } 
+    }
 }
