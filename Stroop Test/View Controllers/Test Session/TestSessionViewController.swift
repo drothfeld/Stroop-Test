@@ -14,6 +14,14 @@ import UIKit
 // being used in a test session and records responses.
 // ==================================================
 class TestSessionViewController: UIViewController {
+    // Storyboard Outlets
+    @IBOutlet weak var AudioRecordingIndicator: UIImageView!
+    @IBOutlet weak var WordCountLabel: UILabel!
+    @IBOutlet weak var StroopTimerLabel: UILabel!
+    @IBOutlet weak var StroopLabel: UILabel!
+    @IBOutlet weak var bannerAd: UIView!
+    
+    
     // Controller Values
     var testSession: TestSession!
     

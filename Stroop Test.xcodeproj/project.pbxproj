@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B09B7F6622C2AA620078C405 /* exit_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B09B7F6522C2AA620078C405 /* exit_icon.png */; };
+		B09B7F6822C2B0DC0078C405 /* recording_audio_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B09B7F6722C2B0DC0078C405 /* recording_audio_icon.png */; };
 		B0D2636D22BAA9DE00E8ACA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */; };
 		B0D2636F22BAA9DE00E8ACA6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2636E22BAA9DE00E8ACA6 /* MenuViewController.swift */; };
 		B0D2637222BAA9DE00E8ACA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D2637022BAA9DE00E8ACA6 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B09B7F6522C2AA620078C405 /* exit_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_icon.png; sourceTree = "<group>"; };
+		B09B7F6722C2B0DC0078C405 /* recording_audio_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_audio_icon.png; sourceTree = "<group>"; };
 		B0D2636922BAA9DE00E8ACA6 /* Stroop Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stroop Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0D2636E22BAA9DE00E8ACA6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		B0D2638F22BC061900E8ACA6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B09B7F6722C2B0DC0078C405 /* recording_audio_icon.png */,
+				B09B7F6522C2AA620078C405 /* exit_icon.png */,
 				B0D2639022BC061F00E8ACA6 /* background.png */,
 				B0D2639222BC0C8700E8ACA6 /* company_logo_icon.png */,
 			);
@@ -198,6 +204,8 @@
 				B0D2639322BC0C8700E8ACA6 /* company_logo_icon.png in Resources */,
 				B0D2639122BC062000E8ACA6 /* background.png in Resources */,
 				B0D2637422BAA9DF00E8ACA6 /* Assets.xcassets in Resources */,
+				B09B7F6622C2AA620078C405 /* exit_icon.png in Resources */,
+				B09B7F6822C2B0DC0078C405 /* recording_audio_icon.png in Resources */,
 				B0D2637222BAA9DE00E8ACA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
