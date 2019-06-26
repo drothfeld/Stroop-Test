@@ -26,4 +26,13 @@ struct TestSession {
             if ( (!stroops.contains(newStroop) && !allowRepeats) || (allowRepeats)) { stroops.append(newStroop) }
         } while stroops.count != numberOfStroops
     }
+    
+    // Returns whether the test session is complete
+    func isComplete(stroopCount: Int) -> Bool { return (stroopCount == self.stroops.count) }
+    
+    // Stroop was incorrectly identified
+    mutating func incorrectResponse() { self.performance.append(false) }
+    
+    // Stroop was correctly identified
+    mutating func correctReponse() { self.performance.append(true) }
 }
