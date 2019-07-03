@@ -8,12 +8,13 @@
 
 
 import UIKit
+import Speech
 
 // ==================================================
 // Controls the view that generates the Stroops
 // being used in a test session and records responses.
 // ==================================================
-class TestSessionViewController: UIViewController {
+class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
     // Storyboard Outlets
     @IBOutlet weak var AudioRecordingIndicator: UIImageView!
     @IBOutlet weak var WordCountLabel: UILabel!
@@ -28,10 +29,16 @@ class TestSessionViewController: UIViewController {
     var stroopCount = 0
     var currentTime = 0
     
+    let audioEngine = AVAudioEngine()
+    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+    let request = SFSpeechAudioBufferRecognitionRequest()
+    var recognitionTask: SFSpeechRecognitionTask?
+    
     
     override func viewDidLoad() {
         displayNextStroop()
         stroopTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TestSessionViewController.updateStroopTimer)), userInfo: nil, repeats: true)
+        self.recordAndRecognizeSpeech()
     }
     
     // Decrement the stroop countdown timer and update the interface
@@ -39,7 +46,61 @@ class TestSessionViewController: UIViewController {
         if (currentTime > 0) {
             currentTime -= 1
             StroopTimerLabel.text = String(currentTime)
-        } else { displayNextStroop() }
+        } else {
+            displayNextStroop()
+            testSession.incorrectResponse()
+        }
+    }
+    
+    // Records the users speech and attempts to recognize stroop colors
+    func recordAndRecognizeSpeech() {
+        let node = audioEngine.inputNode
+        let recordingFormat = node.outputFormat(forBus: 0)
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
+            self.request.append(buffer)
+        }
+        audioEngine.prepare()
+        do { try audioEngine.start() } catch {
+            self.AudioRecordingIndicator.alpha = 0.25
+            return print(error)
+        }
+        
+        // A recognizer is not supported for the current locale
+        guard let myRecognizer = SFSpeechRecognizer() else {
+            self.AudioRecordingIndicator.alpha = 0.25
+            return
+        }
+        
+        // A recognizer is not available right now
+        if !myRecognizer.isAvailable { return }
+        
+        // Begin audio recognition task
+        //
+        // TODO: FIX BUG THAT IS RECORDING THE SAME SPOKEN WORD 3 TIMES IN A ROW.
+        //       UPDATE DEPRECIATED .substring API.
+        //
+        self.AudioRecordingIndicator.alpha = 1.00
+        recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
+            if let result = result {
+                let bestString = result.bestTranscription.formattedString
+                print(bestString.lowercased())
+                var lastString: String = ""
+                for segment in result.bestTranscription.segments {
+                    let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
+                    lastString = bestString.substring(from: indexTo)
+                }
+                self.checkRecordedResult(capturedString: lastString.lowercased())
+            } else if let error = error {
+                print(error)
+                self.AudioRecordingIndicator.alpha = 0.25
+            }
+        })
+    }
+    
+    // Checks if a captued audio recording is the correct answer
+    func checkRecordedResult(capturedString: String) {
+        (capturedString == currentStroop.textColor.asString) ? testSession.correctReponse() : testSession.incorrectResponse()
+        displayNextStroop()
     }
     
     // Reset the timer and update the stroop label with the next stroop
