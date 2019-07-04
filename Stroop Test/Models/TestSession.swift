@@ -28,7 +28,7 @@ struct TestSession {
     }
     
     // Returns whether the test session is complete
-    func isComplete(stroopCount: Int) -> Bool { return (stroopCount == self.stroops.count) }
+    func isComplete() -> Bool { return (self.performance.count >= self.stroops.count) }
     
     // Stroop was incorrectly identified
     mutating func incorrectResponse() { self.performance.append(false) }

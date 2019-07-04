@@ -39,6 +39,6 @@ let green = Color(id: 5, asString: "green", asUIColor: .green)
 let purple = Color(id: 6, asString: "purple", asUIColor: .purple)
 let blue = Color(id: 7, asString: "blue", asUIColor: .blue)
 let brown = Color(id: 8, asString: "brown", asUIColor: .brown)
-let cyan = Color(id: 9, asString: "cyan", asUIColor: .cyan)
+let cyan = Color(id: 9, asString: "psion", asUIColor: .cyan)
 let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta)
 let colors = [black, red, yellow, orange, green, purple, blue, brown, cyan, magenta]

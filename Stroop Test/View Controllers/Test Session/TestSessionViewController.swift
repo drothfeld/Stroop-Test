@@ -76,19 +76,21 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
         
         // Begin audio recognition task
         //
-        // TODO: FIX BUG THAT IS RECORDING THE SAME SPOKEN WORD 3 TIMES IN A ROW.
+        // TODO (TEMPORARILY FIXED):
+        // FIX BUG THAT IS RECORDING THE SAME SPOKEN WORD 3 TIMES IN A ROW.
         //
         self.AudioRecordingIndicator.alpha = 1.00
+        var bestString = ""
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
             if let result = result {
-                let bestString = result.bestTranscription.formattedString
+                let previousBestString = bestString
+                bestString = result.bestTranscription.formattedString
                 var lastString: String = ""
                 for segment in result.bestTranscription.segments {
                     let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
                     lastString = String(bestString[indexTo...])
                 }
-                print(lastString)
-                self.checkRecordedResult(capturedString: lastString.lowercased())
+                if (previousBestString != bestString) { self.checkRecordedResult(capturedString: lastString.lowercased()) }
             } else if let error = error {
                 print(error)
                 self.AudioRecordingIndicator.alpha = 0.25
@@ -104,7 +106,7 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     // Reset the timer and update the stroop label with the next stroop
     func displayNextStroop() {
-        if (testSession.isComplete(stroopCount: stroopCount)) {
+        if (testSession.isComplete()) {
             stroopTimer.invalidate()
             // TODO:
             // TEST COMPLETE. SEGUE TO RESULTSVIEWCONTROLLER.
