@@ -14,6 +14,11 @@ import UIKit
 // Stroop's string value or font color.
 // ==================================================
 struct Color: Equatable {
+    // TODO:
+    // Add new phonetics field [String] that contains all likely verbal
+    // string translations (i.e. 'cyan' -> 'psion') and check if lastString
+    // in TestSessionViewController is one of these phonetic pronunciations
+    // when determining if the user's response was correct.
     var id: Int?
     var asString: String?
     var asUIColor: UIColor?
@@ -39,6 +44,6 @@ let green = Color(id: 5, asString: "green", asUIColor: .green)
 let purple = Color(id: 6, asString: "purple", asUIColor: .purple)
 let blue = Color(id: 7, asString: "blue", asUIColor: .blue)
 let brown = Color(id: 8, asString: "brown", asUIColor: .brown)
-let cyan = Color(id: 9, asString: "psion", asUIColor: .cyan)
+let cyan = Color(id: 9, asString: "cyan", asUIColor: .cyan)
 let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta)
 let colors = [black, red, yellow, orange, green, purple, blue, brown, cyan, magenta]

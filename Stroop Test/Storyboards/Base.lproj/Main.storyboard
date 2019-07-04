@@ -516,6 +516,7 @@ Test</string>
                         <outlet property="StroopTimerLabel" destination="MsQ-g2-CtG" id="DBY-1E-dk9"/>
                         <outlet property="WordCountLabel" destination="7S0-Pv-80a" id="stG-lv-9hZ"/>
                         <outlet property="bannerAd" destination="2VX-t0-zBl" id="Rk4-Hf-DdJ"/>
+                        <segue destination="OrT-J2-dbY" kind="show" identifier="toResults" id="tKK-MU-QMu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjg-fH-aeP" userLabel="First Responder" sceneMemberID="firstResponder"/>

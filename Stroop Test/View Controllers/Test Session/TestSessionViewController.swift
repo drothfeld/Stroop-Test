@@ -41,6 +41,14 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
         self.recordAndRecognizeSpeech()
     }
     
+    // Pass completed test session to the results view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toResults" {
+            let viewController = segue.destination as! ResultsViewController
+            viewController.testSession = testSession
+        }
+    }
+    
     // Decrement the stroop countdown timer and update the interface
     @objc func updateStroopTimer() {
         if (currentTime > 0) {
@@ -108,8 +116,7 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
     func displayNextStroop() {
         if (testSession.isComplete()) {
             stroopTimer.invalidate()
-            // TODO:
-            // TEST COMPLETE. SEGUE TO RESULTSVIEWCONTROLLER.
+            performSegue(withIdentifier: "toResults", sender: self)
         } else {
             stroopCount += 1
             WordCountLabel.text = "Word Count: " + String(stroopCount)

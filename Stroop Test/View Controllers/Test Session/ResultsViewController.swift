@@ -14,9 +14,11 @@ import UIKit
 // the user performed during a test session.
 // ==================================================
 class ResultsViewController: UIViewController {
+    // Controller Values
+    var testSession: TestSession!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }
