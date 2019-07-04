@@ -77,18 +77,17 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
         // Begin audio recognition task
         //
         // TODO: FIX BUG THAT IS RECORDING THE SAME SPOKEN WORD 3 TIMES IN A ROW.
-        //       UPDATE DEPRECIATED .substring API.
         //
         self.AudioRecordingIndicator.alpha = 1.00
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
             if let result = result {
                 let bestString = result.bestTranscription.formattedString
-                print(bestString.lowercased())
                 var lastString: String = ""
                 for segment in result.bestTranscription.segments {
                     let indexTo = bestString.index(bestString.startIndex, offsetBy: segment.substringRange.location)
-                    lastString = bestString.substring(from: indexTo)
+                    lastString = String(bestString[indexTo...])
                 }
+                print(lastString)
                 self.checkRecordedResult(capturedString: lastString.lowercased())
             } else if let error = error {
                 print(error)
@@ -108,7 +107,7 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
         if (testSession.isComplete(stroopCount: stroopCount)) {
             stroopTimer.invalidate()
             // TODO:
-            // TEST COMPLETE. SHOW SPINNER WHILE ANALYZING PERFORMANCE AND SEGUE TO RESULTSVIEWCONTROLLER
+            // TEST COMPLETE. SEGUE TO RESULTSVIEWCONTROLLER.
         } else {
             stroopCount += 1
             WordCountLabel.text = "Word Count: " + String(stroopCount)
