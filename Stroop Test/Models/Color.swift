@@ -14,20 +14,17 @@ import UIKit
 // Stroop's string value or font color.
 // ==================================================
 struct Color: Equatable {
-    // TODO:
-    // Add new phonetics field [String] that contains all likely verbal
-    // string translations (i.e. 'cyan' -> 'psion') and check if lastString
-    // in TestSessionViewController is one of these phonetic pronunciations
-    // when determining if the user's response was correct.
     var id: Int?
     var asString: String?
     var asUIColor: UIColor?
+    var phonetics: [String]?
     static let shared = Color()
     
-    init(id: Int, asString: String, asUIColor: UIColor) {
+    init(id: Int, asString: String, asUIColor: UIColor, phonetics: [String]) {
         self.id = id
         self.asString = asString
         self.asUIColor = asUIColor
+        self.phonetics = phonetics
     }
     
     private init(){}
@@ -36,14 +33,14 @@ struct Color: Equatable {
     static func == (lhs: Color, rhs: Color) -> Bool { return ( (lhs.id == rhs.id) && (lhs.asString == rhs.asString) && (lhs.asUIColor == lhs.asUIColor) ) }
 }
 
-let black = Color(id: 1, asString: "black", asUIColor: .black)
-let red = Color(id: 2, asString: "red", asUIColor: .red)
-let yellow = Color(id: 3, asString: "yellow", asUIColor: .yellow)
-let orange = Color(id: 4, asString: "orange", asUIColor: .orange)
-let green = Color(id: 5, asString: "green", asUIColor: .green)
-let purple = Color(id: 6, asString: "purple", asUIColor: .purple)
-let blue = Color(id: 7, asString: "blue", asUIColor: .blue)
-let brown = Color(id: 8, asString: "brown", asUIColor: .brown)
-let cyan = Color(id: 9, asString: "cyan", asUIColor: .cyan)
-let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta)
+let black = Color(id: 1, asString: "black", asUIColor: .black, phonetics: [])
+let red = Color(id: 2, asString: "red", asUIColor: .red, phonetics: [])
+let yellow = Color(id: 3, asString: "yellow", asUIColor: .yellow, phonetics: [])
+let orange = Color(id: 4, asString: "orange", asUIColor: .orange, phonetics: [])
+let green = Color(id: 5, asString: "green", asUIColor: .green, phonetics: [])
+let purple = Color(id: 6, asString: "purple", asUIColor: .purple, phonetics: [])
+let blue = Color(id: 7, asString: "blue", asUIColor: .blue, phonetics: [])
+let brown = Color(id: 8, asString: "brown", asUIColor: .brown, phonetics: [])
+let cyan = Color(id: 9, asString: "cyan", asUIColor: .cyan, phonetics: ["psion"])
+let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta, phonetics: [])
 let colors = [black, red, yellow, orange, green, purple, blue, brown, cyan, magenta]
