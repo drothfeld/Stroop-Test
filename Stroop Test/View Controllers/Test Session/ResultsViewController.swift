@@ -14,6 +14,10 @@ import UIKit
 // the user performed during a test session.
 // ==================================================
 class ResultsViewController: UIViewController {
+    // Storyboard Outlets
+    @IBOutlet var PerformanceFraction: Array<UILabel>!
+    @IBOutlet weak var AverageResponseTimeLabel: UILabel!
+    
     // Controller Values
     var testSession: TestSession!
     
