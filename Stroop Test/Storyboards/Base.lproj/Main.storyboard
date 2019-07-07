@@ -482,14 +482,6 @@ Test</string>
                                 <color key="textColor" red="0.075515173375606537" green="0.85365837812423706" blue="0.18290790915489197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VX-t0-zBl" userLabel="Ad Banner View">
-                                <rect key="frame" x="27.5" y="572" width="320" height="75"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="0Go-6G-0TV"/>
-                                    <constraint firstAttribute="height" constant="75" id="EJ6-zD-6j5"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -499,8 +491,6 @@ Test</string>
                             <constraint firstItem="Vos-sx-lPe" firstAttribute="trailing" secondItem="ESl-d1-gvX" secondAttribute="trailing" id="ExE-KB-sei"/>
                             <constraint firstItem="KeJ-jM-Xl1" firstAttribute="top" secondItem="Vos-sx-lPe" secondAttribute="bottom" constant="88" id="NfQ-pB-vZE"/>
                             <constraint firstItem="tSp-l7-NtK" firstAttribute="trailing" secondItem="ESl-d1-gvX" secondAttribute="trailing" id="Svk-23-EHv"/>
-                            <constraint firstItem="ESl-d1-gvX" firstAttribute="bottom" secondItem="2VX-t0-zBl" secondAttribute="bottom" constant="20" id="bnb-nE-zyG"/>
-                            <constraint firstItem="2VX-t0-zBl" firstAttribute="centerX" secondItem="JKU-bx-gzZ" secondAttribute="centerX" id="dur-E9-dia"/>
                             <constraint firstItem="Vos-sx-lPe" firstAttribute="leading" secondItem="ESl-d1-gvX" secondAttribute="leading" id="ejd-om-5Di"/>
                             <constraint firstItem="tSp-l7-NtK" firstAttribute="leading" secondItem="ESl-d1-gvX" secondAttribute="leading" id="kAJ-xH-RZn"/>
                             <constraint firstItem="Vos-sx-lPe" firstAttribute="centerX" secondItem="JKU-bx-gzZ" secondAttribute="centerX" id="nE1-eO-6QX"/>
@@ -515,7 +505,6 @@ Test</string>
                         <outlet property="StroopLabel" destination="KeJ-jM-Xl1" id="Jzh-Xq-sP0"/>
                         <outlet property="StroopTimerLabel" destination="MsQ-g2-CtG" id="DBY-1E-dk9"/>
                         <outlet property="WordCountLabel" destination="7S0-Pv-80a" id="stG-lv-9hZ"/>
-                        <outlet property="bannerAd" destination="2VX-t0-zBl" id="Rk4-Hf-DdJ"/>
                         <segue destination="OrT-J2-dbY" kind="show" identifier="toResults" id="tKK-MU-QMu"/>
                     </connections>
                 </viewController>
@@ -666,6 +655,6 @@ Test</string>
         <image name="recording_audio_icon.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="94j-Te-g3N"/>
+        <segue reference="Xl1-gH-oTN"/>
     </inferredMetricsTieBreakers>
 </document>

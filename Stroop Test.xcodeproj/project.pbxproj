@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B072727922D2AF82005B5569 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B072727822D2AF82005B5569 /* logo.png */; };
 		B072727B22D2AFCD005B5569 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B072727A22D2AFCD005B5569 /* icon.png */; };
+		B072727D22D2B357005B5569 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B072727C22D2B357005B5569 /* README.md */; };
 		B09B7F6622C2AA620078C405 /* exit_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B09B7F6522C2AA620078C405 /* exit_icon.png */; };
 		B09B7F6822C2B0DC0078C405 /* recording_audio_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B09B7F6722C2B0DC0078C405 /* recording_audio_icon.png */; };
 		B0D2636D22BAA9DE00E8ACA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2636C22BAA9DE00E8ACA6 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		B072727822D2AF82005B5569 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B072727A22D2AFCD005B5569 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B072727C22D2B357005B5569 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B09B7F6522C2AA620078C405 /* exit_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit_icon.png; sourceTree = "<group>"; };
 		B09B7F6722C2B0DC0078C405 /* recording_audio_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recording_audio_icon.png; sourceTree = "<group>"; };
 		B0D2636922BAA9DE00E8ACA6 /* Stroop Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stroop Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 		B0D2636022BAA9DE00E8ACA6 = {
 			isa = PBXGroup;
 			children = (
+				B072727C22D2B357005B5569 /* README.md */,
 				B0D2636B22BAA9DE00E8ACA6 /* Stroop Test */,
 				B0D2636A22BAA9DE00E8ACA6 /* Products */,
 			);
@@ -208,6 +211,7 @@
 			files = (
 				B0D2637722BAA9DF00E8ACA6 /* LaunchScreen.storyboard in Resources */,
 				B0D2639322BC0C8700E8ACA6 /* company_logo_icon.png in Resources */,
+				B072727D22D2B357005B5569 /* README.md in Resources */,
 				B072727B22D2AFCD005B5569 /* icon.png in Resources */,
 				B0D2639122BC062000E8ACA6 /* background.png in Resources */,
 				B0D2637422BAA9DF00E8ACA6 /* Assets.xcassets in Resources */,
