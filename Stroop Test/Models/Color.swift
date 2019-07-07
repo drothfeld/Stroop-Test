@@ -29,7 +29,7 @@ struct Color: Equatable {
     
     private init(){}
     
-    func random(maxRange: Int) -> Color { return colors[Int(arc4random_uniform(UInt32(maxRange - 1)) + 0)] }
+    func random(maxRange: Int) -> Color { return colors[Int(arc4random_uniform(UInt32(maxRange)) + 0)] }
     static func == (lhs: Color, rhs: Color) -> Bool { return ( (lhs.id == rhs.id) && (lhs.asString == rhs.asString) && (lhs.asUIColor == lhs.asUIColor) ) }
 }
 
@@ -41,6 +41,6 @@ let green = Color(id: 5, asString: "green", asUIColor: .green, phonetics: [])
 let purple = Color(id: 6, asString: "purple", asUIColor: .purple, phonetics: [])
 let blue = Color(id: 7, asString: "blue", asUIColor: .blue, phonetics: [])
 let brown = Color(id: 8, asString: "brown", asUIColor: .brown, phonetics: [])
-let cyan = Color(id: 9, asString: "cyan", asUIColor: .cyan, phonetics: ["psion"])
-let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta, phonetics: [])
+let cyan = Color(id: 9, asString: "cyan", asUIColor: .cyan, phonetics: ["psion", "teal", "turquoise"])
+let magenta = Color(id: 10, asString: "magenta", asUIColor: .magenta, phonetics: ["pink"])
 let colors = [black, red, yellow, orange, green, purple, blue, brown, cyan, magenta]
