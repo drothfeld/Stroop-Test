@@ -17,6 +17,7 @@ import UIKit
 struct TestSession {
     var stroops = [Stroop]()
     var performance = [Bool]()
+    var responseTime = [Int]()
     var responseTimeLimit = 10
     
     init(numberOfStroops: Int, responseTimeLimit: Int, colorRange: Int, allowRepeats: Bool, allowSameTextFontColor: Bool) {

@@ -55,8 +55,9 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
             currentTime -= 1
             StroopTimerLabel.text = String(currentTime)
         } else {
-            displayNextStroop()
             testSession.incorrectResponse()
+            testSession.responseTime.append(testSession.responseTimeLimit - currentTime)
+            displayNextStroop()
         }
     }
     
@@ -109,6 +110,7 @@ class TestSessionViewController: UIViewController, SFSpeechRecognizerDelegate {
     // Checks if a captued audio recording is the correct answer
     func checkRecordedResult(capturedString: String) {
         (capturedString == currentStroop.textColor.asString || currentStroop.textColor.phonetics!.contains(capturedString)) ? testSession.correctReponse() : testSession.incorrectResponse()
+        testSession.responseTime.append(testSession.responseTimeLimit - currentTime)
         displayNextStroop()
     }
     

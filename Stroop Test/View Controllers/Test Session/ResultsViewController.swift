@@ -24,5 +24,15 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AverageResponseTimeLabel.text = "Average Response Time: " + String(testSession.responseTime.sum() / testSession.responseTime.count) + "s"
+        PerformanceFraction[0].text = String(testSession.performance.filter({ $0 == true }).count)
+        PerformanceFraction[1].text = String(testSession.performance.count)
+    }
+}
+
+// Extends Sequence class to return sum of all values
+extension Sequence where Element: AdditiveArithmetic {
+    func sum() -> Element {
+        return reduce(.zero, +)
     }
 }
