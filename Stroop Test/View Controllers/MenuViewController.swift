@@ -31,7 +31,10 @@ class MenuViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tappedBackground(_:)))
         tap.delegate = self as? UIGestureRecognizerDelegate
         self.view.addGestureRecognizer(tap)
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // Begin title label blinking animtion
         TapToBeginLabel.startBlink()
     }
